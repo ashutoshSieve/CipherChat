@@ -6,7 +6,7 @@ const User = require("./UserDataBase");
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/callback"
+    callbackURL: "https://cipherchat-7zhk.onrender.com/auth/callback"
 },
 async (accessToken, refreshToken, profile, done) => {
     try {
