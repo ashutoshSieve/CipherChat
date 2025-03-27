@@ -219,8 +219,8 @@ app.post("/login", function(req,res){
                     name:result.name
                 };
                 const token=generateJWT(paylod);
-                res.cookie('token', token, { httpOnly: true,path: '/'}); // Using a cookie
-                res.redirect("/main"); // Redirect after setting the cookie
+                res.cookie('token', token, { httpOnly: true,path: '/'}); 
+                res.redirect("/main");
             }else{
                 console.log("Invalid Credentials !!");
                 res.redirect("/login");
